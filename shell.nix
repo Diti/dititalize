@@ -3,7 +3,7 @@ with import <nixpkgs> { };
 let
   inherit (lib) optional optionals;
 
-  elixir = beam.packages.erlangR22.elixir_1_11;
+  elixir = beam.packages.erlangR23.elixir_1_11;
 in mkShell {
   buildInputs = [ asciidoctor elixir git ]
     ++ optional stdenv.isLinux inotify-tools ++ optionals stdenv.isDarwin
