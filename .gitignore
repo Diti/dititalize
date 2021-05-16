@@ -13,6 +13,10 @@
 # Where third-party dependencies like ExDoc output generated docs.
 /doc/
 
+# GitHub will display README.adoc, etc. in this directory.
+/docs/*
+!/docs/*.adoc
+
 # Ignore .fetch files in case you like to edit your project deps locally.
 /.fetch
 
