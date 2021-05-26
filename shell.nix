@@ -10,7 +10,7 @@ in mkShell {
     (with darwin.apple_sdk.frameworks; [ CoreFoundation CoreServices ]);
 
   shellHook = ''
-    SOURCE_DATE_EPOCH = "${git} log -1 --pretty=%ct";
+    export SOURCE_DATE_EPOCH="${git} log -1 --pretty=%ct";
   '';
 
   ERL_INCLUDE_PATH = "${erlang}/lib/erlang/usr/include";
